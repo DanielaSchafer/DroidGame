@@ -1,14 +1,12 @@
 public class Wall extends Obstacle
 {
-
-  private int xStart;
-  private int yStart;
   private int length;
+
+  public Wall(){}
 
   public Wall(int xPos, int yPos, int len)
   {
-    xStart = xPos;
-    yStart = yPos;
+    super();
     thickness = length;
   }
 
@@ -18,5 +16,15 @@ public class Wall extends Obstacle
       return true;
     else
       return false;
+  }
+
+  public int getLength()
+  {
+    return length;
+  }
+
+  pubilc String toString()
+  {
+    return("x: "+ xPosition+" y: "+yPosition+ " length "+length);
   }
 }

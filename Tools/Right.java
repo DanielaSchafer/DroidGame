@@ -11,7 +11,7 @@ public class Right extends Tool{
     super(xPos, yPos, zPos);
   }
 
-  public String whatDoes(){
+  public String toString(){
     return "R";
   }
 
