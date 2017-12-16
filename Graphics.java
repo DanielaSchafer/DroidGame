@@ -111,9 +111,9 @@ void drawPlaceGrid()
   rect(192.5,190,50,50,10);
     fill(222,66,60);
   rect(192.5,490,50,50,10);
-  noFill();
-  stroke(255,255,255);
-  rect(226.5,373,33,33,10);
+  fill(255,255,255);
+  rect(209,507,17,17,5);
+  triangle(209,207,209,223,226,215);
 }
 void mouseClicked(){
   int[] pos = {mouseX, mouseY};
