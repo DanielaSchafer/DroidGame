@@ -23,7 +23,7 @@ public class interface Tool
 		position = newPosition;
 	}
 
-	public abstract whatever whatDoes(){ //should return what the tool does
+	public abstract String whatDoes(){ //returns commands
 
 	}
 //identifies the type of tool
