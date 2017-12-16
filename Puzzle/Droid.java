@@ -67,7 +67,8 @@ public boolean isFacingIntoWall(wall[] walls){
       return true;
   }
   return false;
-=======
+}
+
 public boolean checkIfSuccess()//at the end of the game, call this method to see if you succeeded
 {
   if(xPosition==1020 && yPosition == 640)
@@ -78,7 +79,6 @@ public boolean checkIfSuccess()//at the end of the game, call this method to see
   {
     return false;
   }
->>>>>>> 633152c98530c675ee3246590c6effce054225bc
-}
 
+}
 }
