@@ -78,7 +78,11 @@ void mouseClicked(){
     System.out.println("shoot");
   }
   if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
+    if(list.get(list.size()-1) == Tools.tLOOP)
+      loops.get(loop.length-1) = loops.get(loop.length-1)+1;
+    else
     list.add(Tools.tLOOP);
+    loops.add(1);
   }
 //  if(start button)
 //    Runner.ParseFull(list);
