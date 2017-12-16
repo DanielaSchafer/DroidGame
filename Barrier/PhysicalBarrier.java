@@ -1,8 +1,8 @@
 public class PhysicalBarrier extends Obstacle
 {
-  public PhysicalBarrier ()
+  public PhysicalBarrier (int x, int y)
   {
-    super();
+    super(x,y);
   }
 
 
