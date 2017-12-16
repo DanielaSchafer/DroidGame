@@ -7,8 +7,8 @@ public class interface Tool
 		position = {0,0,0};
 	}
 
-	public Tool(int xPos, int yPos, int zPos){
-		position = {xPos, yPos, zPos};
+	public Tool(int xPos, int yPos){
+		position = {xPos, yPos};
   }
 
 	public whatever look(){ //returns the look

@@ -8,7 +8,7 @@ public class Left extends Tool
     super();
   }
 
-  public Left (int xPos; int yPos; int zPos)
+  public Left (int xPos, int yPos)
   {
     super (xPos; yPos; zPos);
   }
