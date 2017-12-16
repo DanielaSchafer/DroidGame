@@ -45,4 +45,27 @@ public void setPosition(int x, int y)
   yPosition =y;
 }
 
+public boolean isFacingIntoWall(wall[] walls){
+  int[] newpoint = [xPosition, yPosition];
+  if(droid.getDirection.equals(Direction.NORTH))
+    newpoint[1] -= 40;
+  else if(droid.getDirection.equals(Direction.SOUTH))
+    newpoint[1] +=40;
+  else if(droid.getDirection.equals(Direction.EAST))
+    newpoint[0] += 40;
+  else if(droid.getDirection.equals(Direction.WEST))
+    newpoint[0] -=40;
+
+  for(int i=0; i<walls.length; i++){
+    int[] corner;
+    if(getDirection)
+      corners = {walls[i].getXPos+walls[i].getLength, walls[i].getYPos+40};
+    else
+      corners = {walls[i].getXPos+40, walls[i].getYPos+walls[i].getLength};
+    if((newpoint[0]>walls[i].getXPos)&&(newpoint[0]<corners[0])&&(newpoint[1]>walls[i].getYPos)&&(newpoint[1]<corners[1]))
+      return true;
+  }
+  return false;
+}
+
 }
