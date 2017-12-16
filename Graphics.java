@@ -118,12 +118,14 @@ void mouseClicked(){
     loops.add(1);
     }
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 24ac079e3ba52acd8764240024d08b196e6e9dec
   if((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[0]) && (pos[0]<240))
     Runner.ParseFull(list);
-
   }
 
   Droid droid = new Droid (780, 120, Direction.SOUTH);
