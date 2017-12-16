@@ -1,10 +1,12 @@
 public class Wall extends Obstacle
 {
   private int length;
-  public Wall(int x, int y,int len)
+  private boolean vertical;
+  public Wall(int x, int y,int len, boolean vert)
   {
    super(x,y);
    length = len;
+   vertical =vert;
   }
 
   public boolean isBlockedByWall(int xPos, int yPos)
@@ -18,6 +20,11 @@ public class Wall extends Obstacle
   public int getLength()
   {
     return length;
+  }
+
+  public boolean getDirection()
+  {
+    return vertical;
   }
 
   public String toString()
