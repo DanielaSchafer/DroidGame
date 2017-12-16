@@ -1,6 +1,7 @@
 ArrayList<Tools> list = new ArrayList<Tools>();
 ArrayList<Integer> loops = new ArrayList<Integer>();
 int input;
+Runner run = new Runner();
 
 void setup(){
   //sets base background
@@ -123,7 +124,7 @@ void mouseClicked(){
     }
   }
   if((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[0]) && (pos[0]<240))
-    parseFull(list);
+    run.parseFull(list,loops);
   }
 
   Droid droid = new Droid (780, 120, Direction.SOUTH);
