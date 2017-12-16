@@ -9,7 +9,6 @@ public static parseTool(Tools currTool){
     case HOME:
       droid.setPosition(20, 20);
       droid.changeDirection(SOUTH);
-    i++;
 
     case FORWARD:
       if(droid.getDirection==EAST)
@@ -20,7 +19,6 @@ public static parseTool(Tools currTool){
         droid.moveYPos(40);
       else if(droid.getDirection==WEST)
         droid.moveXPos(-40);
-      i++;
 
     case LEFT:
       if(droid.getDirection==EAST)
@@ -31,7 +29,6 @@ public static parseTool(Tools currTool){
         droid.changeDirection(EAST);
       else if(droid.getDirection==WEST)
         droid.changeDirection(SOUTH);
-      i++;
 
     case RIGHT:
       if(droid.getDirection==EAST)
@@ -42,7 +39,6 @@ public static parseTool(Tools currTool){
         droid.changeDirection(WEST);
       else if(droid.getDirection==WEST)
         droid.changeDirection(NORTH);
-      i++;
     }
 }
 public static parseFull(ArrayList<Tool> tools)
@@ -55,7 +51,7 @@ public static parseFull(ArrayList<Tool> tools)
 
       default:
         parseTool(t);
-
+        i++;
       }
   }
 }
