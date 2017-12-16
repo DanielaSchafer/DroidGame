@@ -6,40 +6,41 @@ public class Runner
 //change positon of the droid based on the commands
 
 public static parseTool(Tools currTool){
-
-  case HOME:
-    droid.setPosition(20, 20);
-    droid.changeDirection(SOUTH);
-
-  case FORWARD:
-    if(droid.getDirection==EAST)
-      droid.moveXPos(40);
-    else if(droid.getDirection==NORTH)
-      droid.moveYPos(-40);
-    else if(droid.getDirection==SOUTH)
-      droid.moveYPos(40);
-    else if(droid.getDirection==WEST)
-      droid.moveXPos(-40);
-
-  case LEFT:
-    if(droid.getDirection==EAST)
-      droid.changeDirection(NORTH);
-    else if(droid.getDirection==NORTH)
-      droid.changeDirection(WEST);
-    else if(droid.getDirection==SOUTH)
-      droid.changeDirection(EAST);
-    else if(droid.getDirection==WEST)
+  switch(t){
+    case HOME:
+      droid.setPosition(20, 20);
       droid.changeDirection(SOUTH);
 
-  case RIGHT:
-    if(droid.getDirection==EAST)
-      droid.changeDirection(SOUTH);
-    else if(droid.getDirection==NORTH)
-      droid.changeDirection(EAST);
-    else if(droid.getDirection==SOUTH)
-      droid.changeDirection(WEST);
-    else if(droid.getDirection==WEST)
-      droid.changeDirection(NORTH);
+    case FORWARD:
+      if(droid.getDirection==EAST)
+        droid.moveXPos(40);
+      else if(droid.getDirection==NORTH)
+        droid.moveYPos(-40);
+      else if(droid.getDirection==SOUTH)
+        droid.moveYPos(40);
+      else if(droid.getDirection==WEST)
+        droid.moveXPos(-40);
+
+    case LEFT:
+      if(droid.getDirection==EAST)
+        droid.changeDirection(NORTH);
+      else if(droid.getDirection==NORTH)
+        droid.changeDirection(WEST);
+      else if(droid.getDirection==SOUTH)
+        droid.changeDirection(EAST);
+      else if(droid.getDirection==WEST)
+        droid.changeDirection(SOUTH);
+
+    case RIGHT:
+      if(droid.getDirection==EAST)
+        droid.changeDirection(SOUTH);
+      else if(droid.getDirection==NORTH)
+        droid.changeDirection(EAST);
+      else if(droid.getDirection==SOUTH)
+        droid.changeDirection(WEST);
+      else if(droid.getDirection==WEST)
+        droid.changeDirection(NORTH);
+    }
 }
 public static parseFull(ArrayList<Tool> tools)
 {
