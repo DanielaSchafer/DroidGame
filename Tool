@@ -5,7 +5,7 @@ public class Tool {
 
 	}
 
-  public Tool()
+  public Tool(int xPos, int yPos, int zPos)
   {
 
   }
