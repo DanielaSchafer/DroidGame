@@ -22,14 +22,8 @@ PhysicalBarrier [] b = {barrier1,barrier2,barrier3};
 Maze level1 = new Maze (w,b);
 
 
-void setup()
-{
-  size(1050,600);
-  background(0);
-  drawWalls();
-  drawBarriers();
-  drawGrid();
-}
+
+
 
 void drawGrid()
 {
