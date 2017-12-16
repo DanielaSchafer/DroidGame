@@ -122,6 +122,12 @@ void mouseClicked(){
     loops.add(1);
     }
   }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 24ac079e3ba52acd8764240024d08b196e6e9dec
   if((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[0]) && (pos[0]<240))
     Runner.ParseFull(list);
   }
@@ -155,8 +161,10 @@ void mouseClicked(){
    ellipse (droid.getDroidX(), droid.getDroidY(), 20,20);
  }
 
+>>>>>>> ce7592586827243b624eb1ffdfc4ad805d9d87aa
 
 //  if(start button)
+<<<<<<< HEAD
 //    Runner.ParseFull(list);
 Wall wall1= new Wall (720,100, 120, true);
 Wall wall2=new Wall (720, 220, 120, false);
@@ -234,4 +242,7 @@ void drawWalls()
 
 
   }
+=======
+//    Runner.ParseFull(list, loops);
+>>>>>>> 348e7b4a2ed029f23561bb359d138181feaef347
 }

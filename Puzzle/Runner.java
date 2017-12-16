@@ -5,7 +5,6 @@ public class Runner
   Droid droid = new Droid(50, 50, Direction.NORTH);
 
 
-
   //array to hold the commands
   //change positon of the droid based on the commands
 
@@ -45,11 +44,15 @@ public class Runner
   }
 
 //takes in an arraylist of tools and changes direction/position of droid
-  public void parseFull(ArrayList<Tools> t)
+  public void parseFull(ArrayList<Tools> t, ArrayList<Integers> loops)
   {
+    int loopIndex = 0;
     for (int i = 0; i<t.size(); i++) {
       if (t.get(i) == Tools.tLOOP) {
-        parseTool(t.get(i+1));
+        for(int j = 1; j<loops.get(loopIndex); j++){
+          parseTool(t.get(i+1));
+        }
+        loopIndex++;
         i++;
       } else
         parseTool(t.get(i));
