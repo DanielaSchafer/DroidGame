@@ -123,6 +123,7 @@ void mouseClicked(){
     loops.add(1);
     }
   }
+
   if((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[0]) && (pos[0]<240))
     run.parseFull(list,loops);
   }
@@ -157,9 +158,7 @@ void mouseClicked(){
  }
 
 
-
 //  if(start button)
-<<<<<<< HEAD
 //    Runner.ParseFull(list);
 Wall wall1= new Wall (720,100, 120, true);
 Wall wall2=new Wall (720, 220, 120, false);
@@ -237,3 +236,7 @@ void drawWalls()
 
 
   }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> e0594e1d9e8d7638ba33b3cf3616f2755ff56894
