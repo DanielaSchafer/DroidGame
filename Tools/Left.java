@@ -13,7 +13,7 @@ public class Left extends Tool
     super (xPos; yPos; zPos);
   }
 
-  public String whatDoes()
+  public String toString()
   {
     return "L";
   }

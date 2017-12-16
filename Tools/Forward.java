@@ -11,7 +11,7 @@ public class Forward extends Tool{
     super(xPos, yPos, zPos);
   }
 
-  public String whatDoes(){
+  public String toString(){
     return "F";
   }
 
