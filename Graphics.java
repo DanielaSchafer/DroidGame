@@ -79,19 +79,6 @@ void mouseClicked(){
   }
   if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
     list.add(Tools.tLOOP);
-    state = Keyboard.KEYBOARD;
-    loops.add(key);
-  }
-
-  void KeyPressed()
-  {
-    if(state == KEYBOARD)
-    {
-      if(key == "1" || key == "2" || key == "3" || key == "4" || key == "5" || key == "6")
-      {
-        input = key;
-      }
-    }
   }
 //  if(start button)
 //    Runner.ParseFull(list);
