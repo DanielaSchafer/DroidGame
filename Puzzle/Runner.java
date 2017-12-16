@@ -14,6 +14,7 @@ public class Runner
       droid.setPosition(20, 20);
       droid.changeDirection(Direction.SOUTH);
     } else if (currTool == Tools.tFORWARD) {
+      println("forward");
       if (droid.getDirection()==Direction.EAST)
         droid.moveXPos(40);
       else if (droid.getDirection()==Direction.NORTH)
@@ -23,6 +24,7 @@ public class Runner
       else if (droid.getDirection()==Direction.WEST)
         droid.moveXPos(-40);
     } else if (currTool == Tools.tLEFT) {
+      println("left");
       if (droid.getDirection()==Direction.EAST)
         droid.changeDirection(Direction.NORTH);
       else if (droid.getDirection()==Direction.NORTH)
@@ -32,6 +34,7 @@ public class Runner
       else if (droid.getDirection()==Direction.WEST)
         droid.changeDirection(Direction.SOUTH);
     } else if (currTool == Tools.tRIGHT) {
+      println("Right");
       if (droid.getDirection()==Direction.EAST)
         droid.changeDirection(Direction.SOUTH);
       else if (droid.getDirection()==Direction.NORTH)
