@@ -1,6 +1,6 @@
 public class Runner
 {
-  ArrayList<Tool> tools = new ArrayList<String>();
+  private Tools t;
 
 //array to hold the commands
 //change positon of the droid based on the commands
@@ -9,7 +9,7 @@ public class Runner
 
 public static parseTool(  ArrayList<Tool> tools)
 {
-  switch()
+  switch(t)
   		{
   		case HOME:
         droid.moveXPos()
