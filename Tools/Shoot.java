@@ -8,9 +8,9 @@ public class Shoot extends Tool()
     super();
   }
 
-  public Shoot (int xPos; int yPos; int zPos)
+  public Shoot (int xPos, int yPos)
   {
-    super (xPos; yPos; zPos);
+    super (xPos, yPos);
   }
 
   public String toString()
