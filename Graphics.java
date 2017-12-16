@@ -55,7 +55,13 @@ rect(25,565,650,130,10);
   line(110,620,90,600);
 
   //turnleft logo
-
+  noFill();
+  rect(195,605,50,50,0,20,0,0);
+  rect(195,615,40,40,0,15,0,0);
+  fill(165,177,204);
+  noStroke();
+//  stroke(165,177,204);
+  rect(180,617,40,80,0,15,0,0);
 
 }
 
@@ -78,11 +84,20 @@ void mouseClicked(){
     System.out.println("shoot");
   }
   if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
-    if(list.get(list.size()-1) == Tools.tLOOP)
-      loops.get(loop.length-1) = loops.get(loop.length-1)+1;
-    else
     list.add(Tools.tLOOP);
-    loops.add(1);
+    state = Keyboard.KEYBOARD;
+    loops.add(key);
+  }
+
+  void KeyPressed()
+  {
+    if(state == KEYBOARD)
+    {
+      if(key == "1" || key == "2" || key == "3" || key == "4" || key == "5" || key == "6")
+      {
+        input = key;
+      }
+    }
   }
 //  if(start button)
 //    Runner.ParseFull(list);
