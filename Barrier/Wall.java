@@ -2,17 +2,17 @@ public class Wall extends Obstacle
 {
   private int length;
 
-  public Wall(){}
+
 
   public Wall(int xPos, int yPos, int len)
   {
-    super();
-    thickness = length;
+   super();
+   length = len;
   }
 
   public boolean isBlockedByWall(int xPos, int yPos)
   {
-    if(xPosition == xPos || yPosition == yPos)
+    if(getXPos() == xPos || getYPos() == yPos)
       return true;
     else
       return false;
@@ -23,8 +23,8 @@ public class Wall extends Obstacle
     return length;
   }
 
-  pubilc String toString()
+  public String toString()
   {
-    return("x: "+ xPosition+" y: "+yPosition+ " length "+length);
+    return("x: "+ getXPos()+" y: "+getYPos()+ " length "+length);
   }
 }

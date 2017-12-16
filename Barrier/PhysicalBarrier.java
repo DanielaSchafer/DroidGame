@@ -1,11 +1,10 @@
-public PhysicalBarrier extends Obstacle
+public class PhysicalBarrier extends Obstacle
 {
-  public PhysicalBarrier()
+  public PhysicalBarrier ()
   {
     super();
   }
 
-  public PhysicalBarrier() {}
 
   public boolean canGetThroughBarrier(boolean isShot)
   {

@@ -1,10 +1,5 @@
-Public class Obstacle
+class Obstacle
 {
-
-  public static void main(String[] args)
-  {
-
-  }
 
 private int xPosition;
 private int yPosition;
@@ -27,7 +22,7 @@ public int getYPos()
   return yPosition;
 }
 
-pubilc String toString()
+public String toString()
 {
   return("x: " +xPosition+" y: "+yPosition);
 }

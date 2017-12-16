@@ -1,3 +1,3 @@
 public enum Tools{
-  FORWARD, LEFT, RIGHT, LOOP, SHOOT
+  HOME, FORWARD, LEFT, RIGHT, LOOP
 }
