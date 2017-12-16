@@ -117,9 +117,7 @@ void mouseClicked(){
     }
   }
 
-  }
-
 
 //  if(start button)
-//    Runner.ParseFull(list);
+//    Runner.ParseFull(list, loops);
 }
