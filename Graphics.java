@@ -16,6 +16,10 @@ void setup(){
   drawToolBar();
  drawPlaceGrid();
 
+ drawWalls();
+ drawBarriers();
+ drawGrid();
+
 }
 
 void draw(){
