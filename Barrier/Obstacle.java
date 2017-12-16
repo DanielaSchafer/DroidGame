@@ -3,11 +3,13 @@ Public class Obstacle
 
   public static void main(String[] args)
   {
-  
+
   }
 
 private int xPosition;
 private int yPosition;
+
+public Obstacle(){};
 
 public Obstacle(int xPos, int yPos)
 {
