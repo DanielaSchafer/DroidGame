@@ -108,7 +108,7 @@ void mouseClicked(){
     System.out.println("shoot");
   }
   if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
-    if(list.get(list.size()-1) == Tools.tLOOP)
+    if(list.size()>0 && list.get(list.size()-1) == Tools.tLOOP)
       loops.set((loops.size()-1),(loops.get(loops.size()-1) +1));
     else
     {
