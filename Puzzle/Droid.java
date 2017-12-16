@@ -8,7 +8,7 @@ public Droid(int xPos, int yPos, Direction dir)
 {
   xPosition = xPos;
   yPosition = yPos;
-  d = Direction.dir;
+  d = dir;
 }
 
 public void moveXPos(int change)
@@ -18,7 +18,7 @@ public void moveXPos(int change)
 
 public void changeDirection(Direction dir)
 {
-  d = Direction.dir;
+  d = dir;
 }
 
 public Direction getDirection()
@@ -29,6 +29,12 @@ public Direction getDirection()
 public void moveYPos(int change)
 {
   yPosition = yPosition+change;
+}
+
+public void setPosition(int x, int y)
+{
+  xPosition = x;
+  yPosition =y;
 }
 
 }
