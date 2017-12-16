@@ -237,7 +237,3 @@ void drawWalls()
 
 
   }
-=======
-//    Runner.ParseFull(list, loops);
->>>>>>> 348e7b4a2ed029f23561bb359d138181feaef347
-}
