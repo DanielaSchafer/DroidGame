@@ -1,6 +1,6 @@
 public class Runner
 {
-  ArrayList<Tool> tools = new ArrayList<String>();
+  private Tools t;
 
 //array to hold the commands
 //change positon of the droid based on the commands
@@ -9,7 +9,9 @@ public class Runner
 
 public static parseTool(  ArrayList<Tool> tools)
 {
-  switch()
+  for(int i = 0; i<tools.size(); i++)
+  {
+  switch(t)
   		{
   		case HOME:
         droid.setPosition(20, 20);
@@ -48,4 +50,6 @@ public static parseTool(  ArrayList<Tool> tools)
       case LOOP:
         parseTool(tools.get(page+1));
         parseTool(tools.get(page+1));
+      }
+  }
 }
