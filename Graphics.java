@@ -71,6 +71,19 @@ void drawForward(int x, int y){
   line(x+15,y+20,x+25,y+10);
   line(x+35,y+20,x+25,y+10);
 }
+void drawTurnLeft(int x, int y){
+  drawBlock(x,y);
+  noFill();
+  rect(x+12.5,y+15,25,30,0,10,0,0);
+  rect(x+12.5,y+20,20,25,0,7.5,0,0);
+  fill(165,177,204);
+  noStroke();
+  rect(x+10,y+12.5,5,35);
+  rect(x+10,y+42.5,35,5);
+  stroke(96,106,161);
+  line(x+12.5,y+17.5, x+22.5,y+7.5);
+  line(x+12.5,y+17.5,x+22.5,y+27.5);
+}
 void drawToolBar()
 {
    //toolbar
