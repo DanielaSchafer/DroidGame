@@ -30,6 +30,10 @@ public class Loop extends Tool()
     commands = builder.toString();
   }
 
+  public String id(){
+    return "Loop";
+  }
+
   public String toString(){
     //repeats the string the number of times the loop is supposed to run
     StringBuilder builder = new StringBuilder();
