@@ -1,12 +1,9 @@
 public class Wall extends Obstacle
 {
   private int length;
-
-
-
-  public Wall(int xPos, int yPos, int len)
+  public Wall(int x, int y,int len)
   {
-   super();
+   super(x,y);
    length = len;
   }
 
