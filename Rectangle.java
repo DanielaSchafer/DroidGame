@@ -1,6 +1,6 @@
 public class Rectangle{
-private xPos;
-private yPos;
+private int xPos;
+private int yPos;
 public Rectangle(int x, int y){
 xPos = x;
 yPos = y;
