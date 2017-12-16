@@ -45,6 +45,7 @@ public void setPosition(int x, int y)
   yPosition =y;
 }
 
+<<<<<<< HEAD
 public boolean isFacingIntoWall(wall[] walls){
   int[] newpoint = [xPosition, yPosition];
   if(droid.getDirection.equals(Direction.NORTH))
@@ -66,6 +67,18 @@ public boolean isFacingIntoWall(wall[] walls){
       return true;
   }
   return false;
+=======
+public boolean checkIfSuccess()//at the end of the game, call this method to see if you succeeded
+{
+  if(xPosition==1020 && yPosition == 640)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+>>>>>>> 633152c98530c675ee3246590c6effce054225bc
 }
 
 }

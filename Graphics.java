@@ -1,5 +1,8 @@
 ArrayList<Tools> list = new ArrayList<Tools>();
 ArrayList<Integer> loops = new ArrayList<Integer>();
+ArrayList<Rectangle> rects = new ArrayList<Rectangle>();
+int rectIndex = 0;
+
 int input;
 Runner run = new Runner();
 
@@ -53,6 +56,34 @@ void drawDroid()
   ellipse(375,120,420,100);
 }
 
+void drawBlock(int x,int y){
+  strokeWeight(3);
+  fill(165,177,204);
+  stroke(96,106,161);
+  rect(x,y,50,50,10);
+}
+void drawForward(int x, int y){
+  drawBlock(x, y);
+  strokeWeight(3);
+  stroke(96,106,161);
+  line(x+22.5,y+13,x+22.5,y+40);
+  line(x+27.5,y+13,x+27.5,y+40);
+  line(x+15,y+20,x+25,y+10);
+  line(x+35,y+20,x+25,y+10);
+}
+void drawTurnLeft(int x, int y){
+  drawBlock(x,y);
+  noFill();
+  rect(x+12.5,y+15,25,30,0,10,0,0);
+  rect(x+12.5,y+20,20,25,0,7.5,0,0);
+  fill(165,177,204);
+  noStroke();
+  rect(x+10,y+12.5,5,35);
+  rect(x+10,y+42.5,35,5);
+  stroke(96,106,161);
+  line(x+12.5,y+17.5, x+22.5,y+7.5);
+  line(x+12.5,y+17.5,x+22.5,y+27.5);
+}
 void drawToolBar()
 {
    //toolbar
@@ -104,6 +135,7 @@ void drawPlaceGrid()
   for(int j=0;j<4;j++){
   for(int i=0;i<4;i++){
   rect(192.5+(i*105),190+(j*100),50,50,10);
+    rects.add(Rectangle(192.5+(i*105),190+(j*100));
   }
 
 }
@@ -119,9 +151,11 @@ void mouseClicked(){
   int[] pos = {mouseX, mouseY};
   if((40<pos[0])&&(pos[0]<140)&&(580<pos[1])&&(pos[1]<680)){ //forward has been clicked
     list.add(Tools.tFORWARD);
+    drawForward(rects.get(rectIndex).getXPos(),rects.get(rectIndex).getYPos());
   }
   if((170<pos[0])&&(pos[0]<270)&&(580<pos[1])&&(pos[1]<680)){ //left has been clicked
     list.add(Tools.tLEFT);
+    drawLeft(rects.get(rectIndex).getXPos(),rects.get(rectIndex).getYPos());
   }
   if((300<pos[0])&&(pos[0]<400)&&(580<pos[1])&&(pos[1]<680)){ //right has been clicked
     list.add(Tools.tRIGHT);
@@ -144,6 +178,7 @@ void mouseClicked(){
     run.parseFull(list,loops);
      list.clear();
      loops.clear();
+     rectIndex = 0;
   }
 
   Droid droid = new Droid (780, 120, Direction.SOUTH);
