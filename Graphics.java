@@ -98,6 +98,17 @@ void drawTurnRight(int x, int y){
   line(x+37.5,y+17.5,x+27.5,y+27.5);
 
 }
+void drawLoop(int x, int y){
+  drawBlock(x,y);
+   noFill();
+  rect(x+12.5,y+12.5,25,25,0,10,10,10);
+  fill(165,177,204);
+  noStroke();
+  rect(x+10,y+11,5,10);
+  stroke(96,106,161);
+  line(x+12.5,y+21, x+7.5,y+26);
+  line(x+12.5,y+21,x+17.5,y+26);
+}
 void drawToolBar()
 {
    //toolbar
@@ -132,7 +143,7 @@ rect(25,565,650,130,10);
   stroke(96,106,161);
   line(195,615, 215,595);
   line(195,615,215,635);
-  
+
   //turnright
   noFill();
   rect(325,610,50,60,20,0,0,0);
@@ -144,6 +155,19 @@ rect(25,565,650,130,10);
   stroke(96,106,161);
   line(375,615, 355,595);
   line(375,615,355,635);
+
+  //shoot
+
+
+  //loop
+  noFill();
+  rect(585,605,50,50,0,20,20,20);
+  fill(165,177,204);
+  noStroke();
+  rect(580,603.5,10,20);
+  stroke(96,106,161);
+  line(585,623.5, 575,633.5);
+  line(585,623.5,595,633.5);
 }
 
 void drawPlaceGrid()
