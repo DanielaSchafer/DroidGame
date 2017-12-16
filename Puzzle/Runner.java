@@ -9,6 +9,8 @@ public class Runner
 
 public static parseTool(  ArrayList<Tool> tools)
 {
+  for(int i = 0; i<tools.size(); i++)
+  {
   switch(t)
   		{
   		case HOME:
@@ -22,4 +24,6 @@ public static parseTool(  ArrayList<Tool> tools)
       case LOOP:
         parseTool(tools.get(page+1));
         parseTool(tools.get(page+1));
+      }
+  }
 }
