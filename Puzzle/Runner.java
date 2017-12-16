@@ -7,7 +7,7 @@ public class Runner
 
 
 
-public static parseTool(  ArrayList<Tool> tools)
+public static parseTool(ArrayList<Tool> tools)
 {
   for(int i = 0; i<tools.size(); i++)
   {
@@ -48,8 +48,8 @@ public static parseTool(  ArrayList<Tool> tools)
          direction = NORTH;
 
       case LOOP:
-        parseTool(tools.get(page+1));
-        parseTool(tools.get(page+1));
+        parseTool(tools.get(i+1));
+        parseTool(tools.get(i+1));
       }
   }
 }
