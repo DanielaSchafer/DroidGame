@@ -45,28 +45,28 @@ public void setPosition(int x, int y)
   yPosition =y;
 }
 
-public boolean isFacingIntoWall(wall[] walls){
+public boolean isFacingIntoWall(Wall[] walls){
   int[] newpoint = {xPosition, yPosition};
-  if(droid.getDirection.equals(Direction.NORTH))
+  if(d.equals(Direction.NORTH))
     newpoint[1] -= 40;
-  else if(droid.getDirection.equals(Direction.SOUTH))
+  else if(d.equals(Direction.SOUTH))
     newpoint[1] +=40;
-  else if(droid.getDirection.equals(Direction.EAST))
+  else if(d.equals(Direction.EAST))
     newpoint[0] += 40;
-  else if(droid.getDirection.equals(Direction.WEST))
+  else if(d.equals(Direction.WEST))
     newpoint[0] -=40;
 
   for(int i=0; i<walls.length; i++){
     int[] corner = new int[2];
-    if(getDirection){
-      corners[0] = walls[i].getXPos+walls[i].getLength;
-      corners[1] = walls[i].getYPos+40;
+    if(walls[i].getDirection()){
+      corner[0] = walls[i].getXPos()+walls[i].getLength();
+      corner[1] = walls[i].getYPos()+40;
     }
     else{
-      corners[0] = walls[i].getXPos+40;
-      corners[1] = walls[i].getYPos+walls[i].getLength;
+      corner[0] = walls[i].getXPos()+40;
+      corner[1] = walls[i].getYPos()+walls[i].getLength();
     }
-    if((newpoint[0]>walls[i].getXPos)&&(newpoint[0]<corners[0])&&(newpoint[1]>walls[i].getYPos)&&(newpoint[1]<corners[1]))
+    if((newpoint[0]>walls[i].getXPos())&&(newpoint[0]<corner[0])&&(newpoint[1]>walls[i].getYPos())&&(newpoint[1]<corner[1]))
       return true;
   }
   return false;
@@ -84,4 +84,5 @@ public boolean checkIfSuccess()//at the end of the game, call this method to see
   }
 
 }
+
 }
