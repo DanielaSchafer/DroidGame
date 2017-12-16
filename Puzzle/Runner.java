@@ -6,7 +6,6 @@ public class Runner
 //change positon of the droid based on the commands
 
 public static parseTool(Tools currTool){
-  switch(t){
     case HOME:
       droid.setPosition(20, 20);
       droid.changeDirection(SOUTH);
