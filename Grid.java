@@ -27,6 +27,19 @@ void setup()
   drawGrid();
 }
 
+void drawGrid()
+{
+  stroke (255,255,255);
+  for (int i = 720; i<=1040; i=i+40)
+  {
+    line(i,20,i,580);
+  }
+  for (int i = 20; i<600; i=i+40)
+  {
+    line (720, i, 1040, i);
+  }
+}
+
 void drawWalls()
 {
   Wall[] allWalls = level1.getWalls();
