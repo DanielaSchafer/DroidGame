@@ -45,4 +45,16 @@ public void setPosition(int x, int y)
   yPosition =y;
 }
 
+public boolean checkIfSuccess()//at the end of the game, call this method to see if you succeeded
+{
+  if(xPosition==1020 && yPosition == 640)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+
 }
