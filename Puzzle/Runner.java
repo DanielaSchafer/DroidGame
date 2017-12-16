@@ -44,15 +44,16 @@ public class Runner
   }
 
 //takes in an arraylist of tools and changes direction/position of droid
-  public void parseFull(ArrayList<Tools> t, ArrayList<Integers> loops)
+  public void parseFull(ArrayList<Tools> t, ArrayList<Integer> loops)
   {
     int loopIndex = 0;
     for (int i = 0; i<t.size(); i++) {
       if (t.get(i) == Tools.tLOOP) {
+        if(loops.size()>0){
         for(int j = 1; j<loops.get(loopIndex); j++){
           parseTool(t.get(i+1));
         }
-        loopIndex++;
+        loopIndex++;}
         i++;
       } else
         parseTool(t.get(i));
