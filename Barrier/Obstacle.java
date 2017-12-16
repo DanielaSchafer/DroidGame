@@ -27,5 +27,8 @@ public int getYPos()
   return yPosition;
 }
 
-
+pubilc String toString()
+{
+  return("x: " +xPosition+" y: "+yPosition);
+}
 }
