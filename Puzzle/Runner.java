@@ -10,8 +10,8 @@ public class Runner
 
 public parseTool(  ArrayList<Tool> tools)
 {
-  switch(page)
+  switch(t)
   		{
-  		case HOME:
+  		case  FORWARD:
     }
 }
