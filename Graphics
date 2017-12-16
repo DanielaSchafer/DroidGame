@@ -2,15 +2,33 @@ void setup(){
   //sets base background
   size(1050, 600);
   noStroke();
+   fill(50,50,50);
+  rect(700, 0, 350,600);
   fill(80,80,80);
   rect(0,0,700, 600);
-  fill(50,50,50);
-  rect(700, 0, 350,600);
+
 
   //droid
   fill(230,230,230);
-  rect(250,150,300,450);
- arc(400, 150, 300, 200, PI, TWO_PI);
+  //door rect
+  rect(-50,100,250,500);
+  fill(80,80,80);
+  //cut the door ellipse
+  ellipse(75,90,300,80);
+  fill(230,230,230);
+  //add to door ellipse
+  // ellipse(25, 500,300,80);
+   //main body rect
+  rect(150,100,450,500);
+  //top
+  ellipse(375, 100, 450, 350);
+  //inside
+  fill(200,200,200);
+  rect(165,120,420,500);
+
+  fill(215,215,215);
+  ellipse(375,120,420,100);
+
 
 
 }
