@@ -1,6 +1,5 @@
 ArrayList<Tools> list = new ArrayList<Tools>();
 ArrayList<Integer> loops = new ArrayList<Integer>();
-Keyboard state = Keyboard.NO_KEYBORAD;
 int input;
 
 void setup(){
@@ -85,7 +84,7 @@ void mouseClicked(){
   }
   if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
     if(list.get(list.size()-1) == Tools.tLOOP)
-      loops.get(loops.size()-1) =   loops.get(loops.size()-1) +1;
+      loops.set((loops.size()-1),(loops.get(loops.size()-1) +1));
     else
     {
     list.add(Tools.tLOOP);
