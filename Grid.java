@@ -13,8 +13,12 @@ Wall wall11 = new Wall (960, 500, 160, true);
 
 
 PhysicalBarrier barrier1= new PhysicalBarrier(760,140);
+PhysicalBarrier barrier2 = new PhysicalBarrier(880, 260);
+PhysicalBarrier barrier3 = new PhysicalBarrier(1000, 620);
+PhysicalBarrier barrier4 = new PhysicalBarrier(800, 420);
+
 Wall[] w = {wall1, wall2, wall3, wall4, wall5, wall6, wall7, wall8, wall9, wall10, wall11};
-PhysicalBarrier [] b = {barrier1};
+PhysicalBarrier [] b = {barrier1,barrier2,barrier3};
 Maze level1 = new Maze (w,b);
 
 
