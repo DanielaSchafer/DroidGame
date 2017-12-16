@@ -20,6 +20,8 @@ void setup(){
 
 void draw(){
 
+  drawSmallDroid();
+
 }
 
 void drawDroid()
@@ -121,7 +123,7 @@ void mouseClicked(){
 
   Droid droid = new Droid (780, 120, Direction.SOUTH);
 
- void drawDroid ()
+ void drawSmallDroid ()
  {
    if (droid.getDirection()==Direction.SOUTH)
    {
