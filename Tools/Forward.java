@@ -15,4 +15,8 @@ public class Forward extends Tool{
     return "F";
   }
 
+  public String id()
+  {
+    return "F";
+  }
 }

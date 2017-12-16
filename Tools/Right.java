@@ -15,4 +15,9 @@ public class Right extends Tool{
     return "R";
   }
 
+  public String id()
+  {
+    return "R";
+  }
+
 }

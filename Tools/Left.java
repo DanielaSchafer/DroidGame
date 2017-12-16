@@ -18,4 +18,9 @@ public class Left extends Tool
     return "L";
   }
 
+  public String id()
+  {
+    return "L";
+  }
+
 }

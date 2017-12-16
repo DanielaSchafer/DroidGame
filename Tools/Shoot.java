@@ -17,4 +17,9 @@ public class Shoot extends Tool()
   {
     return "S";
   }
+
+  public String id()
+  {
+    return "S";
+  }
 }
