@@ -1,6 +1,6 @@
 public class Left extends Tool
 {
-  int [] postion;
+  int[] postion;
   whatever look;
 
   public Left()
