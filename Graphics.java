@@ -91,15 +91,30 @@ rect(25,565,650,130,10);
 
 void drawPlaceGrid()
 {
+  stroke(204,138,81);
+  for(int i=0; i<4; i++){
+    line(217,215+(i*100),530,215+(i*100));
+  }
+  line(532.5,215,532.5,315);
+  line(217.5,315,217.5,415);
+  line(532.5,415,532.5,515);
+
   noStroke();
   fill(150,150,150);
   for(int j=0;j<4;j++){
   for(int i=0;i<4;i++){
   rect(192.5+(i*105),190+(j*100),50,50,10);
   }
-}
-}
 
+}
+  fill(175,234,112);
+  rect(192.5,190,50,50,10);
+    fill(222,66,60);
+  rect(192.5,490,50,50,10);
+  noFill();
+  stroke(255,255,255);
+  rect(226.5,373,33,33,10);
+}
 void mouseClicked(){
   int[] pos = {mouseX, mouseY};
   if((40<pos[0])&&(pos[0]<140)&&(580<pos[1])&&(pos[1]<680)){ //forward has been clicked
