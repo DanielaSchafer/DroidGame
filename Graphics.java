@@ -53,6 +53,21 @@ void drawDroid()
   ellipse(375,120,420,100);
 }
 
+void drawBlock(int x,int y){
+  strokeWeight(3);
+  fill(165,177,204);
+  stroke(96,106,161);
+  rect(x,y,50,50,10);
+}
+void drawForward(int x, int y){
+  drawBlock(x, y);
+  strokeWeight(3);
+  stroke(96,106,161);
+  line(x+22.5,y+13,x+22.5,y+40);
+  line(x+27.5,y+13,x+27.5,y+40);
+  line(x+15,y+20,x+25,y+10);
+  line(x+35,y+20,x+25,y+10);
+}
 void drawToolBar()
 {
    //toolbar
