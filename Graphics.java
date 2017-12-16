@@ -119,6 +119,35 @@ void mouseClicked(){
 
   }
 
+  Droid droid = new Droid (780, 120, Direction.SOUTH);
+
+ void drawDroid ()
+ {
+   if (droid.getDirection()==Direction.SOUTH)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX(), droid.getDroidY()+10, droid.getDroidX(),droid.getDroidY()+15);
+   }
+   else if (droid.getDirection()==Direction.WEST)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX()-10, droid.getDroidY(), droid.getDroidX()-15,droid.getDroidY());
+   }
+   else if (droid.getDirection()==Direction.EAST)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX()+10, droid.getDroidY(), droid.getDroidX()+15,droid.getDroidY());
+   }
+   else
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX(), droid.getDroidY()-10, droid.getDroidX(),droid.getDroidY()-15);
+   }
+   fill(0,0,255);
+   stroke(255,255,255);
+   ellipse (droid.getDroidX(), droid.getDroidY(), 20,20);
+ }
+
 
 //  if(start button)
 //    Runner.ParseFull(list);
