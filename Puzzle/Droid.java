@@ -11,6 +11,14 @@ public Droid(int xPos, int yPos, Direction dir)
   d = dir;
 }
 
+public int getDroidX()
+{
+  return xPosition;
+}
+public int getDroidY()
+{
+  return (yPosition);
+}
 public void moveXPos(int change)
 {
   xPosition = xPosition+change;
