@@ -15,9 +15,7 @@ public class Tool
 
 
   }
-//identifies the type of tool
-//what it looks like
-//what it does
+
 
 
 }
