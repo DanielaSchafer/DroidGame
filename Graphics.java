@@ -6,13 +6,25 @@ void setup(){
   //sets base background
   size(1050, 720);
   noStroke();
-  fill(50,50,50);
+   fill(50,50,50);
   rect(700, 0, 350,720);
   fill(80,80,80);
   rect(0,0,700, 720);
 
 
-  //droid
+  drawDroid();
+  drawToolBar();
+ drawPlaceGrid();
+
+}
+
+void draw(){
+
+}
+
+void drawDroid()
+{
+ //droid
   fill(230,230,230);
   //door rect
   rect(-50,100,250,620);
@@ -32,7 +44,11 @@ void setup(){
   //inside top shading
   fill(185,185,185);
   ellipse(375,120,420,100);
-  //toolbar
+}
+
+void drawToolBar()
+{
+   //toolbar
 
 fill(150,150,150);
 rect(25,565,650,130,10);
@@ -55,17 +71,26 @@ rect(25,565,650,130,10);
 
   //turnleft logo
   noFill();
-  rect(195,605,50,50,0,20,0,0);
-  rect(195,615,40,40,0,15,0,0);
+  rect(195,610,50,60,0,20,0,0);
+  rect(195,620,40,50,0,15,0,0);
   fill(165,177,204);
   noStroke();
-//  stroke(165,177,204);
-  rect(180,617,40,80,0,15,0,0);
-
+  rect(190,605,10,70);
+  rect(190,665,70,10);
+  stroke(96,106,161);
+  line(195,615, 215,595);
+  line(195,615,215,635);
 }
 
-void draw(){
-
+void drawPlaceGrid()
+{
+  noStroke();
+  fill(150,150,150);
+  for(int j=0;j<4;j++){
+  for(int i=0;i<4;i++){
+  rect(192.5+(i*105),190+(j*100),50,50,10);
+  }
+}
 }
 
 void mouseClicked(){
