@@ -1,18 +1,18 @@
-public class Forward extends Tool{
+public class Right extends Tool{
 
   int[] position;
   whatever look;
 
-  public Forward(){
+  public Right(){
     super();
   }
 
-  public Forward(int xPos, int yPos, int zPos){
+  public Right(int xPos, int yPos, int zPos){
     super(xPos, yPos, zPos);
   }
 
   public String whatDoes(){
-    return "F";
+    return "R";
   }
 
 }
