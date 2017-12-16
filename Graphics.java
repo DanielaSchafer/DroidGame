@@ -20,6 +20,8 @@ void setup(){
 
 void draw(){
 
+  drawSmallDroid();
+
 }
 
 void drawDroid()
@@ -117,6 +119,43 @@ void mouseClicked(){
     }
   }
 
+<<<<<<< HEAD
+=======
+  if((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[0]) && (pos[0]<240))
+    Runner.ParseFull(list);
+
+  }
+
+  Droid droid = new Droid (780, 120, Direction.SOUTH);
+
+ void drawSmallDroid ()
+ {
+   if (droid.getDirection()==Direction.SOUTH)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX(), droid.getDroidY()+10, droid.getDroidX(),droid.getDroidY()+15);
+   }
+   else if (droid.getDirection()==Direction.WEST)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX()-10, droid.getDroidY(), droid.getDroidX()-15,droid.getDroidY());
+   }
+   else if (droid.getDirection()==Direction.EAST)
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX()+10, droid.getDroidY(), droid.getDroidX()+15,droid.getDroidY());
+   }
+   else
+   {
+     stroke(255,0,0);
+     line(droid.getDroidX(), droid.getDroidY()-10, droid.getDroidX(),droid.getDroidY()-15);
+   }
+   fill(0,0,255);
+   stroke(255,255,255);
+   ellipse (droid.getDroidX(), droid.getDroidY(), 20,20);
+ }
+
+>>>>>>> ce7592586827243b624eb1ffdfc4ad805d9d87aa
 
 //  if(start button)
 //    Runner.ParseFull(list, loops);
