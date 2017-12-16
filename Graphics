@@ -1,8 +1,14 @@
 void setup(){
-  size(1000, 600);
+  //sets base background
+  size(1050, 600);
   noStroke();
   fill(80,80,80);
-  rect(0,0,650, 600);
+  rect(0,0,700, 600);
   fill(50,50,50);
-  rect(650, 0, 350,600);
+  rect(700, 0, 350,600);
+
+  //droid
+  fill(230,230,230);
+  rect(250,150,300,450);
+
 }
