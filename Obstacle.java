@@ -1,7 +1,10 @@
-Public class Obstacle{
+Public class Obstacle
+{
 
-public static void main(String[] args) {
-}
+  public static void main(String[] args)
+  {
+  
+  }
 
 private int xPosition;
 private int yPosition;
