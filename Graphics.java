@@ -1,8 +1,10 @@
+ArrayList<Tools> list = new ArrayList<Tools>();
+
 void setup(){
   //sets base background
   size(1050, 720);
   noStroke();
-   fill(50,50,50);
+  fill(50,50,50);
   rect(700, 0, 350,720);
   fill(80,80,80);
   rect(0,0,700, 720);
@@ -56,4 +58,25 @@ rect(25,565,650,130,10);
 
 void draw(){
 
+}
+
+void mouseClicked(){
+  int[] pos = {mouseX, mouseY};
+  if((40<pos[0])&&(pos[0]<140)&&(580<pos[1])&&(pos[1]<680)){ //forward has been clicked
+    list.add(Tools.tFORWARD);
+  }
+  if((170<pos[0])&&(pos[0]<270)&&(580<pos[1])&&(pos[1]<680)){ //left has been clicked
+    list.add(Tools.tLEFT);
+  }
+  if((300<pos[0])&&(pos[0]<400)&&(580<pos[1])&&(pos[1]<680)){ //right has been clicked
+    list.add(Tools.tRIGHT);
+  }
+  if((430<pos[0])&&(pos[0]<530)&&(580<pos[1])&&(pos[1]<680)){ //shoot has been clicked
+    System.out.println("shoot");
+  }
+  if((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)){ //loop has been clicked
+    list.add(Tools.tLOOP);
+  }
+//  if(start button)
+//    Runner.ParseFull(list);
 }
