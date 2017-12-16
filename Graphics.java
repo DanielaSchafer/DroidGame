@@ -1,7 +1,7 @@
 ArrayList<Tools> list = new ArrayList<Tools>();
 ArrayList<Integer> loops = new ArrayList<Integer>();
 ArrayList<Rectangle> rects = new ArrayList<Rectangle>();
-int rectIndex = 0;
+int rectIndex = 1;
 
 int input;
 Runner run = new Runner();
@@ -135,7 +135,8 @@ void drawPlaceGrid()
   for(int j=0;j<4;j++){
   for(int i=0;i<4;i++){
   rect(192.5+(i*105),190+(j*100),50,50,10);
-    rects.add(Rectangle(192.5+(i*105),190+(j*100));
+  Rectangle r = new Rectangle((int)((192.5+(i*105))),190+(j*100));
+    rects.add(r);
   }
 
 }
@@ -151,11 +152,13 @@ void mouseClicked(){
   int[] pos = {mouseX, mouseY};
   if((40<pos[0])&&(pos[0]<140)&&(580<pos[1])&&(pos[1]<680)){ //forward has been clicked
     list.add(Tools.tFORWARD);
-    drawForward(rects.get(rectIndex).getXPos(),rects.get(rectIndex).getYPos());
+    drawForward(rects.get(rectIndex).getX(),rects.get(rectIndex).getY());
+    rectIndex++;
   }
   if((170<pos[0])&&(pos[0]<270)&&(580<pos[1])&&(pos[1]<680)){ //left has been clicked
     list.add(Tools.tLEFT);
-    drawLeft(rects.get(rectIndex).getXPos(),rects.get(rectIndex).getYPos());
+    drawTurnLeft(rects.get(rectIndex).getX(),rects.get(rectIndex).getY());
+    rectIndex++;
   }
   if((300<pos[0])&&(pos[0]<400)&&(580<pos[1])&&(pos[1]<680)){ //right has been clicked
     list.add(Tools.tRIGHT);
@@ -180,7 +183,7 @@ void mouseClicked(){
      loops.clear();
      rectIndex = 0;
   }
-
+}
   Droid droid = new Droid (780, 120, Direction.SOUTH);
 
  void drawSmallDroid ()
