@@ -2,13 +2,21 @@
 public class Runner
 {
 
-  Droid droid = new Droid(50, 50, Direction.NORTH);
+private Droid droid;
+private int startX;
+private int startY;
+
+public Runner(Droid d, int x, int y){
+  droid = d;
+  startX = x;
+  startY = y;
+}
 
 
   //array to hold the commands
   //change positon of the droid based on the commands
 
-//Takes in a tool and changes position/direction of the droid
+  //Takes in a tool and changes position/direction of the droid
   public void parseTool(Tools currTool) {
     if (currTool == Tools.tHOME) {
       droid.setPosition(20, 20);
@@ -23,6 +31,7 @@ public class Runner
         droid.moveYPos(40);
       else if (droid.getDirection()==Direction.WEST)
         droid.moveXPos(-40);
+      redrawDroid(droid);
     } else if (currTool == Tools.tLEFT) {
       println("left");
       if (droid.getDirection()==Direction.EAST)
@@ -33,6 +42,7 @@ public class Runner
         droid.changeDirection(Direction.EAST);
       else if (droid.getDirection()==Direction.WEST)
         droid.changeDirection(Direction.SOUTH);
+      redrawDroid(droid);
     } else if (currTool == Tools.tRIGHT) {
       println("Right");
       if (droid.getDirection()==Direction.EAST)
@@ -43,23 +53,32 @@ public class Runner
         droid.changeDirection(Direction.WEST);
       else if (droid.getDirection()==Direction.WEST)
         droid.changeDirection(Direction.NORTH);
+      redrawDroid(droid);
     }
   }
 
-//takes in an arraylist of tools and changes direction/position of droid
+void resetGame()
+{
+  droid.setPosition(startX,startY);
+  droid.changeDirection(Direction.SOUTH);
+  redrawDroid(droid);
+}
+
+  //takes in an arraylist of tools and changes direction/position of droid
   public void parseFull(ArrayList<Tools> t, ArrayList<Integer> loops)
   {
     int loopIndex = 0;
     for (int i = 0; i<t.size(); i++) {
       if (t.get(i) == Tools.tLOOP) {
-        if(loops.size()>0){
-        for(int j = 1; j<loops.get(loopIndex); j++){
-          parseTool(t.get(i+1));
+        if (loops.size()>0) {
+          for (int j = 0; j<loops.get(loopIndex); j++) {
+            parseTool(t.get(i+1));
+          }
+          loopIndex++;
         }
-        loopIndex++;}
         i++;
       } else
         parseTool(t.get(i));
     }
-}
+  }
 }
