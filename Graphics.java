@@ -189,7 +189,6 @@ void drawPlaceGrid()
       rects.add(r);
     }
   }
-  System.out.println(rects);
   fill(175, 234, 112);
   rect(192.5, 190, 50, 50, 10);
   fill(222, 66, 60);

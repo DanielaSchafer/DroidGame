@@ -23,13 +23,13 @@ public Runner(Droid d, int x, int y){
       droid.changeDirection(Direction.SOUTH);
     } else if (currTool == Tools.tFORWARD) {
       println("forward");
-      if (droid.getDirection()==Direction.EAST)
+      if (droid.getDirection()==Direction.EAST && droid.isFacingIntoWall(w) == false)
         droid.moveXPos(40);
-      else if (droid.getDirection()==Direction.NORTH)
+      else if (droid.getDirection()==Direction.NORTH && droid.isFacingIntoWall(w) == false)
         droid.moveYPos(-40);
-      else if (droid.getDirection()==Direction.SOUTH)
+      else if (droid.getDirection()==Direction.SOUTH && droid.isFacingIntoWall(w) == false)
         droid.moveYPos(40);
-      else if (droid.getDirection()==Direction.WEST)
+      else if (droid.getDirection()==Direction.WEST && droid.isFacingIntoWall(w) == false)
         droid.moveXPos(-40);
       redrawDroid(droid);
     } else if (currTool == Tools.tLEFT) {
@@ -60,7 +60,7 @@ public Runner(Droid d, int x, int y){
 void resetGame()
 {
   droid.setPosition(startX,startY);
-  droid.changeDirection(Direction.SOUTH);
+  droid.changeDirection(Direction.NORTH);
   redrawDroid(droid);
 }
 
