@@ -3,13 +3,15 @@ ArrayList<Integer> loops = new ArrayList<Integer>();
 ArrayList<Rectangle> rects = new ArrayList<Rectangle>();
 int rectIndex = 1;
 
+
 int input;
 //1040,680
 //780,120
 Droid droid = new Droid(1020, 643, Direction.NORTH);
-Runner run = new Runner(droid,droid.getDroidX(),droid.getDroidY());
+Runner run = new Runner(droid, droid.getDroidX(), droid.getDroidY());
 
 void setup() {
+
   //sets base background
   size(1050, 720);
   noStroke();
@@ -24,10 +26,9 @@ void setup() {
   drawPlaceGrid();
 
   drawWalls();
-  drawBarriers();
+  //drawBarriers();
   drawGrid();
   drawSmallDroid(droid);
-
 }
 
 void draw() {
@@ -230,12 +231,15 @@ void mouseClicked() {
   }
   if ((560<pos[0])&&(pos[0]<660)&&(580<pos[1])&&(pos[1]<680)) { //loop has been clicked
     if (list.size()>0 && list.get(list.size()-1) == Tools.tLOOP)
+    {
       loops.set((loops.size()-1), (loops.get(loops.size()-1) +1));
-    else
+      drawNumBox(rects.get(rectIndex-1).getX(), rects.get(rectIndex-1).getY(), loops.get(loops.size()-1));
+    } else
     {
       list.add(Tools.tLOOP);
       loops.add(1);
       drawLoop(rects.get(rectIndex).getX(), rects.get(rectIndex).getY());
+      drawNumBox(rects.get(rectIndex).getX(), rects.get(rectIndex).getY(), 1);
       rectIndex++;
     }
   }
@@ -243,9 +247,7 @@ void mouseClicked() {
   if ((192.5<pos[0])&& (pos[0]<242.5) && (190<pos[1]) && (pos[1]<240))
   {
     run.parseFull(list, loops);
-    list.clear();
-    loops.clear();
-    rectIndex = 1;
+    list.add(0,Tools.tHOME);
   }
 
   if ((507<pos[0]) && (pos[0]<557) && (490<pos[1]) && (pos[1]<540))
@@ -261,19 +263,26 @@ void mouseClicked() {
   }
 }
 
+void reset()
+{
+  list.clear();
+  loops.clear();
+  rectIndex = 1;
+}
+
 void drawSmallDroid (Droid droid)
 {
   if (droid.getDirection()==Direction.SOUTH)
   {
-    stroke(255, 0, 0);
+    stroke(255, 255, 255);
     line(droid.getDroidX(), droid.getDroidY()+10, droid.getDroidX(), droid.getDroidY()+15);
   } else if (droid.getDirection()==Direction.WEST)
   {
-    stroke(255, 0, 0);
+    stroke(255, 255, 255);
     line(droid.getDroidX()-10, droid.getDroidY(), droid.getDroidX()-15, droid.getDroidY());
   } else if (droid.getDirection()==Direction.EAST)
   {
-    stroke(255, 0, 0);
+    stroke(255, 255, 255);
     line(droid.getDroidX()+10, droid.getDroidY(), droid.getDroidX()+15, droid.getDroidY());
   } else
   {
@@ -359,4 +368,38 @@ void drawBarriers()
     noStroke();
     rect(allBarriers[i].getXPos()+5, allBarriers[i].getYPos()+5, 30, 30);
   }
+}
+
+void drawNumBox(int x, int y, int num)
+{
+  PFont Font1 = createFont("Arial Bold", 14);
+  PFont Font2 = createFont("Arial Bold", 12);
+  noStroke();
+  fill(200, 50, 50);
+  rect(x+40, y+40, 15, 15, 4);
+  fill(255, 255, 255);
+  textFont(Font1);
+  if (num<10)
+    text(str(num), x+44, y+52);
+  else
+  {
+    textFont(Font2);
+    text(str(num), x+40, y+51);
+  }
+}
+
+void loopErrorText()
+{
+  PFont Font = createFont("Arial Bold", 16);
+  fill(255,0,0);
+  textFont(Font);
+  text("Loops Must Be Followed By An Action",720,700);
+}
+
+void ranIntoWallErrorText()
+{
+  PFont Font = createFont("Arial Bold", 16);
+  fill(150,150,150);
+  textFont(Font);
+  text("Your Droid Ran Into A Wall!",730,700);
 }

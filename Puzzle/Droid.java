@@ -58,7 +58,7 @@ public boolean isFacingIntoWall(Wall[] walls){
 
   for(int i=0; i<walls.length; i++){
     int[] corner = new int[2];
-    if(walls[i].getDirection()){
+    if(!walls[i].getDirection()){
       corner[0] = walls[i].getXPos()+walls[i].getLength();
       corner[1] = walls[i].getYPos()+40;
     }

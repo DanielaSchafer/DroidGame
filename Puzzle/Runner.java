@@ -2,15 +2,15 @@
 public class Runner
 {
 
-private Droid droid;
-private int startX;
-private int startY;
+  private Droid droid;
+  private int startX;
+  private int startY;
 
-public Runner(Droid d, int x, int y){
-  droid = d;
-  startX = x;
-  startY = y;
-}
+  public Runner(Droid d, int x, int y) {
+    droid = d;
+    startX = x;
+    startY = y;
+  }
 
 
   //array to hold the commands
@@ -19,8 +19,8 @@ public Runner(Droid d, int x, int y){
   //Takes in a tool and changes position/direction of the droid
   public void parseTool(Tools currTool) {
     if (currTool == Tools.tHOME) {
-      droid.setPosition(20, 20);
-      droid.changeDirection(Direction.SOUTH);
+      droid.setPosition(startX, startY);
+      droid.changeDirection(Direction.NORTH);
     } else if (currTool == Tools.tFORWARD) {
       println("forward");
       if (droid.getDirection()==Direction.EAST && droid.isFacingIntoWall(w) == false)
@@ -31,6 +31,12 @@ public Runner(Droid d, int x, int y){
         droid.moveYPos(40);
       else if (droid.getDirection()==Direction.WEST && droid.isFacingIntoWall(w) == false)
         droid.moveXPos(-40);
+      else if (droid.isFacingIntoWall(w))
+      {
+        resetGame();
+        ranIntoWallErrorText();
+        return;
+      }
       redrawDroid(droid);
     } else if (currTool == Tools.tLEFT) {
       println("left");
@@ -57,12 +63,13 @@ public Runner(Droid d, int x, int y){
     }
   }
 
-void resetGame()
-{
-  droid.setPosition(startX,startY);
-  droid.changeDirection(Direction.NORTH);
-  redrawDroid(droid);
-}
+  void resetGame()
+  {
+    droid.setPosition(startX, startY);
+    droid.changeDirection(Direction.NORTH);
+    reset();
+    redrawDroid(droid);
+  }
 
   //takes in an arraylist of tools and changes direction/position of droid
   public void parseFull(ArrayList<Tools> t, ArrayList<Integer> loops)
@@ -72,7 +79,15 @@ void resetGame()
       if (t.get(i) == Tools.tLOOP) {
         if (loops.size()>0) {
           for (int j = 0; j<loops.get(loopIndex); j++) {
+            if ((i+1)>t.size()-1) {
+              resetGame();
+              noStroke();
+              loopErrorText();
+              return;
+            }
             parseTool(t.get(i+1));
+            if (loops.size() == 0)
+              return;
           }
           loopIndex++;
         }
